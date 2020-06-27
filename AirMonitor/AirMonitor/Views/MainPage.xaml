@@ -57,7 +57,15 @@
                     HeightRequest="1"
                     HorizontalOptions="Fill"
                     BackgroundColor="LightGray"/>
-                
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
             </StackLayout>
             <ImageButton
                 Padding="12,24"

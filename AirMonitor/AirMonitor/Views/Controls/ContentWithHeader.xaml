@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AirMonitor.Views.Controls.ContentWithHeader">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
-</ContentView>
+             x:Class="AirMonitor.Views.Controls.ContentWithHeader"
+             x:Name="RootView">
+    <Label
+        Text="{Binding Path=Title, Source={x:Reference RootView}}"
+        FontSize="14"
+        TextColor="Black" />
+    <ContentView
+        Content="{Binding Path=ControlContent, Source={x:Reference RootView}}"/>
+</StackLayout>
