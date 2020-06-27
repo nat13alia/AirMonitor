@@ -127,6 +127,46 @@
                     HeightRequest="1"
                     HorizontalOptions="Fill"
                     BackgroundColor="LightGray"/>
+
+                <controls:ContentWithHeader Title="Wilgotność">
+                    <controls:ContentWithHeader.ControlContent>
+                        <StackLayout>
+                            <Label
+                                Text="95%"
+                                FontSize="20"
+                                TextColor="Black" />
+                            <Slider
+                                Value="0.95"
+                                MaximumTrackColor="Gray"
+                                MinimumTrackColor="CornflowerBlue"
+                                ThumbColor="CornflowerBlue"/>
+                        </StackLayout>
+                    </controls:ContentWithHeader.ControlContent>
+                </controls:ContentWithHeader>
+
+                <BoxView
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="LightGray"/>
+                
+                <controls:ContentWithHeader Title="Ciśnienie">
+                    <controls:ContentWithHeader.ControlContent>
+                        <StackLayout>
+                            <Label
+                                Text="1026 hPa"
+                                FontSize="20"
+                                TextColor="Black" />
+                            <!-- Set Maximum before Minimum in Slider -->
+                            <Slider
+                                Maximum="1100"
+                                Minimum="900"
+                                Value="1026"
+                                MaximumTrackColor="Gray"
+                                MinimumTrackColor="CornflowerBlue"
+                                ThumbColor="CornflowerBlue"/>
+                        </StackLayout>
+                    </controls:ContentWithHeader.ControlContent>
+                </controls:ContentWithHeader>
                 
             </StackLayout>
             <ImageButton
