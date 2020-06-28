@@ -5,8 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AirMonitor.DetailsPage"
-             xmlns:controls="clr-namespace:AirMonitor.Views.Controls"
+             xmlns:controls="clr-namespace:AirMonitor.Views.Controls" xmlns:viewModels="clr-namespace:AirMonitor.ViewModels"
              BackgroundColor="#f9f9f9">
+    <ContentPage.BindingContext>
+        <viewModels:DetailsViewModel/>
+    </ContentPage.BindingContext>
     <ScrollView>
         <Grid>
             <StackLayout
@@ -20,7 +23,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    Text="56"
+                                    Text="{Binding CaqiValue}}"
                                     FontAttributes="Bold"
                                     TextColor="Black"
                                     FontSize="32"/>
@@ -65,7 +68,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span
-                                            Text="34"
+                                            Text="{Binding Pm25Value}}"
                                             TextColor="Black"
                                             FontSize="20"/>
                                         <Span
