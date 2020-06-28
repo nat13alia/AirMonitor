@@ -8,9 +8,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Go to details"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                   />
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{ Binding GoToDetailsCommand }"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
