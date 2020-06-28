@@ -8,15 +8,14 @@
             mc:Ignorable="d" 
             android:TabbedPage.ToolbarPlacement="Bottom"
             x:Class="AirMonitor.Views.RootTabbedPage">
-    <NavigationPage Title="Home">
+    <NavigationPage Title="Home" IconImageSource="baseline_home_black_24">
         <x:Arguments>
-            <views:HomePage />
+            <views:HomePage/>
         </x:Arguments>
     </NavigationPage>
-
-    <NavigationPage Title="Settings">
+    <NavigationPage Title="Settings" IconImageSource="baseline_settings_black_24">
         <x:Arguments>
-            <views:SettingsPage />
+            <views:SettingsPage/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
