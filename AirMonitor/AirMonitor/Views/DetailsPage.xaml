@@ -15,7 +15,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:ValueToPercentConverter x:Key="ValueToPercent"/>
+            <converters:ValueToPercentConverter x:Key="PercentToValue"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -107,10 +107,12 @@
                     <controls:ContentWithHeader.ControlContent>
                         <StackLayout>
                             <Label
-                                Text="{Binding HumidityValue, Converter={StaticResource ValueToPercent}, StringFormat='{0}%'}"
+                                Text="{Binding HumidityPercent, StringFormat='{0}%'}"
                                 Style="{StaticResource NormalTextLabelStyle}"/>
                             <Slider
-                                Value="{Binding HumidityValue}"
+                                Maximum="10000"
+                                Minimum="0"
+                                Value="{Binding HumidityPercent, Converter={StaticResource PercentToValue}, Mode=OneWay}"
                                 Style="{StaticResource SliderStyle}"/>
                         </StackLayout>
                     </controls:ContentWithHeader.ControlContent>

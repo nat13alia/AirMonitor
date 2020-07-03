@@ -4,7 +4,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AirMonitor.Models;
+using AirMonitor.ViewModels;
 using Xamarin.Forms;
+using AirMonitor.Converters;
 
 namespace AirMonitor
 {
@@ -13,9 +16,12 @@ namespace AirMonitor
     [DesignTimeVisible(false)]
     public partial class DetailsPage : ContentPage
     {
-        public DetailsPage()
+        public DetailsPage(Measurement item)
         {
             InitializeComponent();
+
+            var vm = BindingContext as DetailsViewModel;
+            vm.Item = item;
         }
 
         private void Help_Clicked(object sender, EventArgs e)

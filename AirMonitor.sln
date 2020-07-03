@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirMonitor.Android", "AirMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirMonitor.iOS", "AirMonitor\AirMonitor.iOS\AirMonitor.iOS.csproj", "{010CD0CC-CEEB-421E-B6AF-26ED473CB6CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirMonitor", "AirMonitor\AirMonitor\AirMonitor.csproj", "{FC649991-32E4-4C15-8524-C88EA0D1D846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirMonitor", "AirMonitor\AirMonitor\AirMonitor.csproj", "{FC649991-32E4-4C15-8524-C88EA0D1D846}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
