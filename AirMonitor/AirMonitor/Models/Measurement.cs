@@ -11,5 +11,6 @@ namespace AirMonitor.Models
         public MeasurementItem[] History { get; set; }
         public MeasurementItem[] Forecast { get; set; }
         public Installation Installation { get; set; }
+        public object Location { get; internal set; }
     }
 }
