@@ -61,6 +61,15 @@ namespace AirMonitor.ViewModels
             _navigation.PushAsync(new DetailsPage(item));
         }
 
+        private ICommand _mapPinTappedCommand;
+        public ICommand MapPinTappedCommand => _mapPinTappedCommand ?? (_mapPinTappedCommand = new Command<string>(OnMapPinTappedCommand));
+
+        private void OnMapPinTappedCommand(string address)
+        {
+            var item = Items.FirstOrDefault(s => s.Installation.Address.Description.Equals(address));
+            _navigation.PushAsync(new DetailsPage(item));
+        }
+
         private List<Measurement> _items;
         public List<Measurement> Items
         {
